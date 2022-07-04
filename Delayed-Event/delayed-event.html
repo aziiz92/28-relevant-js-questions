@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>28-relevant-js-questions - Delayed-event</title>
+    <style>
+      #btn {
+        background-color: #008cba;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TO DO: add 2 and 4 clicks buttons-->
+    <h1>28-relevant-js-questions - Delayed-event</h1>
+    <button id="btn">Click three (3)to submit your answers</button>
+
+    <script>
+      const button = document.getElementById("btn");
+      button.addEventListener("click", function (event) {
+        if (event.detail === 3) {
+          alert("Your answers have been submitted. Relax and good luck :)");
+          document.getElementById("btn").disabled = true;
+        }
+      });
+    </script>
+  </body>
+</html>
