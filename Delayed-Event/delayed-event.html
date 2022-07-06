@@ -26,11 +26,12 @@
     <button id="btn">Click three (3)to submit your answers</button>
 
     <script>
-      const button = document.getElementById("btn");
+      button = document.getElementById("btn");
       button.addEventListener("click", function (event) {
         if (event.detail === 3) {
           alert("Your answers have been submitted. Relax and good luck :)");
           document.getElementById("btn").disabled = true;
+          document.getElementById("btn").style.backgroundColor = "grey";
         }
       });
     </script>
